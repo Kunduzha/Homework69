@@ -1,0 +1,32 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+
+<input type=text id="value1">
+<input type=text id="value2">
+
+    <input type=button value="add" name=add data-url="{% url 'calculate:add' %}" onclick="calculateIntegers(event)">
+    <input type=button value="subtract" name=subtract onclick="calculateIntegers(event)" data-url="{% url 'calculate:subtruct' %}">
+    <input type=button value="multiply" name=multiply onclick="calculateIntegers(event)" data-url="{% url 'calculate:multiply' %}">
+    <input type=button value="divide" name=divide onclick="calculateIntegers(event)" data-url="{% url 'calculate:divide' %}">
+
+
+<p id="result"></p>
+
+
+
+<script src="{% static "js/calculate.js" %}">
+
+</script>
+
+</body>
+</html>
